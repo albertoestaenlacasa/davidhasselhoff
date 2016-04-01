@@ -1,3 +1,53 @@
 my_recipes_homepage:
     path:     /
     defaults: { _controller: MyRecipesBundle:Default:index }
+
+my_recipes_1:
+    path:     /recetas/uno/
+    defaults: { _controller: MyRecipesBundle:Recetas:uno }
+
+my_recipes_2a:
+    path:     /recetas/dos/
+    defaults: { _controller: MyRecipesBundle:Recetas:dos, para: aleman }
+
+my_recipes_2b:
+    path:     /recetas/dos/{para}
+    defaults: { _controller: MyRecipesBundle:Recetas:dos, para: aleman }
+
+my_recipes_3:
+    path:     /recetas/nuevo1/
+    defaults: { _controller: MyRecipesBundle:Recetas:create1 }
+
+my_recipes_4:
+    path:     /recetas/nuevo2/{nombre}/{descripcion}/{dificultad}
+    defaults: { _controller: MyRecipesBundle:Recetas:create2, dificultad: facil }
+
+my_recipes_5_show_one:
+    path:     /recetas/show1/{id}
+    defaults: { _controller: MyRecipesBundle:Recetas:show1 }
+
+my_recipes_6:
+    path:     /recetas/showAll/
+    defaults: { _controller: MyRecipesBundle:Recetas:showAll }
+
+
+
+my_author_0:
+    path:     /author/show/
+    defaults: { _controller: MyRecipesBundle:Author:showAuthors }
+
+my_author_1:
+    path:     /author/create/
+    defaults: { _controller: MyRecipesBundle:Author:create }
+
+
+prueba_trans:
+    path:     /trans
+    defaults: {_controller: MyRecipesBundle:Trans:index }
+
+prueba_trans_change:
+    path:     /{lang}/change
+    defaults: {_controller: MyRecipesBundle:Trans:changeLang, lang: es_ES }
+    requirements:
+        lang: en_US|es_ES|ca_ES
+

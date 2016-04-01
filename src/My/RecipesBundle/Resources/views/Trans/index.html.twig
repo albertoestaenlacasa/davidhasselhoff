@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>traducciones</title>
+</head>
+<body>
+
+	<a href="{{ url('prueba_trans_change', {lang: 'en_US'}) }}">En<a/> |
+	<a href="{{ url('prueba_trans_change', {lang: 'es_ES'}) }}">Es<a/> |
+	<a href="{{ url('prueba_trans_change', {lang: 'ca_ES'}) }}">Vl<a/>	
+
+	<br><br>
+
+	_locale = {{ _locale }} 
+
+	<br><br>
+
+	{% trans into _locale %} STR_FIRSTWORD {% endtrans %}
+
+
+</body>
+</html>

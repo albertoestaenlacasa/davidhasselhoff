@@ -1,0 +1,38 @@
+
+{% block menu %}
+
+	<div>
+		{# selección de idioimas #}
+		<div id="idioma">
+			<a href="{{ url('dh_changeLang', {lang: 'es'}) }}">
+				<img src="{{ asset('images/spain.png') }}" class="{% if _locale != 'es' %}noSelected{% endif %}" title="{% trans from "menu" into 'es' %} STR_LANG {% endtrans %}" />
+			<a/>
+			<a href="{{ url('dh_changeLang', {lang: 'ca'}) }}">
+				<img src="{{ asset('images/comunidadValenciana.gif') }}" class="{% if _locale != 'ca' %}noSelected{% endif %}" title="{% trans from "menu" into 'ca' %} STR_LANG {% endtrans %}"/>
+			<a/>	
+			<a href="{{ url('dh_changeLang', {lang: 'en'}) }}">
+				<img src="{{ asset('images/bandera-en.jpg') }}" class="{% if _locale != 'en' %}noSelected{% endif %}" title="{% trans from "menu" into 'en' %} STR_LANG {% endtrans %}" />
+			<a/> 
+		</div>
+
+		{# menú principal #}
+		<div id="menu">
+			<div id="ini"><a href="{{ url('dh_homepage') }}">David Hasselhoff</a></div>
+
+			{# acceso con autorización #}
+			<div><a href="{{ url('dh_admin') }}">
+				<img src="{{ asset('images/icon-login.png') }}" title="{% trans from "menu" into _locale %} STR_ADMIN {% endtrans %}" /></a>
+			</div>
+
+			<div><a href="">{% trans from "menu" into _locale %} STR_GLOSARY {% endtrans %}</a></div>
+
+			<div><a href="">{% trans from "menu" into _locale %} STR_MUSIC {% endtrans %}</a></div>
+
+			<div><a href="">{% trans from "menu" into _locale %} STR_MOVIES {% endtrans %}</a></div>
+
+			<div><a href="{{ url('dh_news') }}">{% trans from "menu" into _locale %} STR_NEWS {% endtrans %}</a></div>
+
+		</div>
+	</div>	
+
+{% endblock %}

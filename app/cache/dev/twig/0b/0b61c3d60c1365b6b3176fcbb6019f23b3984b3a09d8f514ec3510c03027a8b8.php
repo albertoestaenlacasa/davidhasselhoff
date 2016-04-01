@@ -1,0 +1,40 @@
+<?php
+
+/* @Framework/Form/choice_options.html.php */
+class __TwigTemplate_a9614adc8e13a892529369d1efa8fa17ad5b20e7369f765aceb1d5bf8741fc98 extends Twig_Template
+{
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->parent = false;
+
+        $this->blocks = array(
+        );
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        $__internal_dd8e5ad33f122aa811d5e7a0d6cd59df488d84d32eebe1fc698158a48a975e76 = $this->env->getExtension("native_profiler");
+        $__internal_dd8e5ad33f122aa811d5e7a0d6cd59df488d84d32eebe1fc698158a48a975e76->enter($__internal_dd8e5ad33f122aa811d5e7a0d6cd59df488d84d32eebe1fc698158a48a975e76_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_options.html.php"));
+
+        // line 1
+        echo "<?php echo \$view['form']->block(\$form, 'choice_widget_options') ?>
+";
+        
+        $__internal_dd8e5ad33f122aa811d5e7a0d6cd59df488d84d32eebe1fc698158a48a975e76->leave($__internal_dd8e5ad33f122aa811d5e7a0d6cd59df488d84d32eebe1fc698158a48a975e76_prof);
+
+    }
+
+    public function getTemplateName()
+    {
+        return "@Framework/Form/choice_options.html.php";
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  22 => 1,);
+    }
+}
+/* <?php echo $view['form']->block($form, 'choice_widget_options') ?>*/
+/* */

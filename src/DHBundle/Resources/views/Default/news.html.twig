@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+
+	<div class="titulo">**Noticias**</div>
+
+	<ul>
+		{% for noticia in noticias %}
+			
+			<li>{{ noticia.fecha|date('d/m/Y') }} <a href="{{ url('dh_fullnew',{'id' : noticia.id, 'titulo' : noticia.titulo|replace({' ':'-'}) } ) }}">{{ noticia.titulo }}</a></li>
+		
+		{% endfor %}
+	</ul>
+
+{% endblock %}

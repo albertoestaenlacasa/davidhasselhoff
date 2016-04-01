@@ -1,0 +1,20 @@
+My\RecipesBundle\Entity\prueba1:
+    type: entity
+    table: null
+    repositoryClass: My\RecipesBundle\Repository\prueba1Repository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: '255'
+        difficulty:
+            type: string
+            length: '40'
+        description:
+            type: text
+    lifecycleCallbacks: {  }

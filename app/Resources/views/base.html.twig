@@ -1,13 +1,43 @@
+{# inicializamos variable _locale para está página #}
+{% set _locale = app.session.get('_locale') %}
+
+
+
 <!DOCTYPE html>
+
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+
+<head>
+	
+	<meta charset="UTF-8" />
+	
+	<title>{% block title %}David Hasselhoff{% endblock %}</title>
+
+	<link rel="icon" type="image/x-icon" href="" />
+
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" />
+
+</head>
+
+<body>
+
+
+
+	{% block menu %} {% include '::menu.html.twig' %} {% endblock %}
+
+	{% block contentBase %}
+
+		<div class="contain">
+			{% block content %} {% endblock %}
+		</div>
+
+	{% endblock %}
+
+	{% block javascript %} {% endblock %}
+
+	{% block foot %} {% include '::foot.html.twig' %} {% endblock %}
+
+</body>
+
 </html>
+

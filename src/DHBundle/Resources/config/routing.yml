@@ -1,0 +1,31 @@
+dh_homepage:
+    path:     /
+    defaults: { _controller: DHBundle:Default:index }
+
+dh_news:
+    path:     /noticias
+    defaults: { _controller: DHBundle:Default:news }
+
+dh_fullnew:
+    path:     /noticias/{id}/{titulo}
+    defaults: { _controller: DHBundle:Default:fullnew }
+
+dh_changeLang:
+    path:     /idioma/{lang}
+    defaults: {_controller: DHBundle:Default:changeLang, lang: es }
+    requirements:
+        lang: es|ca|en
+
+dh_admin:
+    path:     /admin
+    defaults: { _controller: DHBundle:Admin:index }
+
+login:
+    pattern:   /login
+    defaults:  { _controller: DHBundle:Admin:login }
+
+login_check:
+    pattern:   /login_check
+
+logout:
+    path:      /logout

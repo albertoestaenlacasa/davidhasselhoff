@@ -1,0 +1,6 @@
+My\RecipesBundle\Entity\Author:
+    properties:
+        name:
+            - NotBlank: 
+        surname:
+            - NotBlank:

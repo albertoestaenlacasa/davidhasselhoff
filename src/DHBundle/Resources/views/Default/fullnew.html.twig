@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+
+	<div class="titulo">{{ noticia.titulo }}</div>
+
+	<div class="realContain">
+
+		{{ noticia.descripcion }} 
+
+		<br><br>
+
+		<img src="{{ noticia.urlImg }}" width="80%" />
+
+	</div>				
+
+{% endblock %}

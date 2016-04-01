@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>STR_LANG</source>
+                <target>Valencià</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>STR_NEWS</source>
+                <target>Novetats</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>STR_MOVIES</source>
+                <target>Películes</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>STR_MUSIC</source>
+                <target>Música</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>STR_GLOSARY</source>
+                <target>Glosari</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>STR_ADMIN</source>
+                <target>Administració</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>STR_CONTACT</source>
+                <target>Contacte</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

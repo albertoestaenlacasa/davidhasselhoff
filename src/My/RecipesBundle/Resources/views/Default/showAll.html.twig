@@ -1,0 +1,29 @@
+<html>
+<head>
+</head>
+
+<body style="background-color:lightblue">
+
+	{% for receta in recetas %}
+
+
+		<div style="padding:15px;background-color: {% if loop.index is odd %} red {% else %}  blue; {% endif %};">
+			{# usando filtro twig que no me va #}
+			<span style="font-size:  {{ receta|textoSizeAlberto }}px;">
+			
+				<a href="{{ url('my_recipes_5_show_one', {id: receta.id}) }}">{{ receta.id }}</a> - {{ receta.name }} - {{ receta.difficulty }}
+			</span>
+		</div>
+
+	{% endfor %}
+
+
+	<br><br>
+
+	{# esto es para el ejercicio 2 de la UNIDAD 4 #}
+	<footer>
+		Contacto : <a href=""> {{ contact_email }} </a>
+	</footer>
+
+</body>
+</html>
