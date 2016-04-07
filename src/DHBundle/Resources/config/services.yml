@@ -1,4 +1,7 @@
 services:
-#    dh.example:
-#        class: DHBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
+    dh.allNews:
+        class: DHBundle\Model\TodasLasNoticias
+        arguments: ["@doctrine.orm.entity_manager"]
+    dh.theNew:
+        class: DHBundle\Model\LaNoticia
+        arguments: ["@doctrine.orm.entity_manager"]

@@ -47,10 +47,11 @@ class AdminController extends Controller
     // ADMINISTRAR NOTICIAS
     public function newsAction()
     {
-        $noticias = $this -> getDoctrine() -> getRepository("DHBundle:Noticias");
-        $noticias = $noticias -> findAll();
+        // ya no usamos esto porque ahora hay un servicio que se encarga de este tema
+        //$noticias = $this -> getDoctrine() -> getRepository("DHBundle:Noticias");
+        //$noticias = $noticias -> findAll();
 
-        return $this->render('DHBundle:Admin:news.html.twig', array('noticias' => $noticias));        
+        return $this->render('DHBundle:Admin:news.html.twig', array('noticias' => $this->get('dh.allNews')->findAll() ));        
     }
 
     public function deleteNewAction()
@@ -59,9 +60,11 @@ class AdminController extends Controller
         $form = Request::createFromGlobals();
         $new_id = $form->request->get('new_id');
 
-        $em = $this->getDoctrine()->getManager();
-        $new = $this -> getDoctrine() -> getRepository('DHBundle:Noticias') ->find($new_id);
+        // pasado al servicio
+        //$new = $this -> getDoctrine() -> getRepository('DHBundle:Noticias') ->find($new_id);            
+        $new = $this->get('dh.theNew')->findNew($new_id);
 
+        $em = $this->getDoctrine()->getManager();
         $em->remove($new);
         $em->flush();
  
@@ -105,8 +108,10 @@ class AdminController extends Controller
         $form = Request::createFromGlobals();
         $new_id = $form->request->get('new_id');
 
-        $em = $this->getDoctrine()->getManager();
-        $new = $this -> getDoctrine() -> getRepository('DHBundle:Noticias') ->find($new_id);            
+        // pasado al servicio
+        //$em = $this->getDoctrine()->getManager();
+        //$new = $this -> getDoctrine() -> getRepository('DHBundle:Noticias') ->find($new_id);            
+        $new = $this->get('dh.theNew')->findNew($new_id);
      
         $form = $this->createFormBuilder($new)
             ->add('titulo', 'text', array('attr' => array('style' => 'width: 500px') ))
@@ -120,6 +125,7 @@ class AdminController extends Controller
      
         if ($form->isValid()) {
             // guardar la noticia en la base de datos
+            $em = $this->getDoctrine()->getManager();
             $em->flush();
 
             return $this->redirect($this->generateUrl('dh_admin_news'));
