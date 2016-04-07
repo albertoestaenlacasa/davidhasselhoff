@@ -47,6 +47,11 @@ class __TwigTemplate_4654ae812ad54a0a85887c8709cc64bf6eccd79a0b1f31d36ec35da7d71
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/style.css"), "html", null, true);
         echo "\" />
 
+\t<link rel=\"shortcut icon\" type=\"image/png\" href=\"";
+        // line 20
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("favicon.png"), "html", null, true);
+        echo "\">
+
 </head>
 
 <body>
@@ -54,24 +59,24 @@ class __TwigTemplate_4654ae812ad54a0a85887c8709cc64bf6eccd79a0b1f31d36ec35da7d71
 
 
 \t";
-        // line 26
-        $this->displayBlock('menu', $context, $blocks);
-        // line 27
-        echo "
-\t";
         // line 28
-        $this->displayBlock('contentBase', $context, $blocks);
-        // line 35
+        $this->displayBlock('menu', $context, $blocks);
+        // line 29
         echo "
 \t";
-        // line 36
-        $this->displayBlock('javascript', $context, $blocks);
+        // line 30
+        $this->displayBlock('contentBase', $context, $blocks);
         // line 37
         echo "
 \t";
         // line 38
-        $this->displayBlock('foot', $context, $blocks);
+        $this->displayBlock('javascript', $context, $blocks);
         // line 39
+        echo "
+\t";
+        // line 40
+        $this->displayBlock('foot', $context, $blocks);
+        // line 41
         echo "
 </body>
 
@@ -86,46 +91,46 @@ class __TwigTemplate_4654ae812ad54a0a85887c8709cc64bf6eccd79a0b1f31d36ec35da7d71
         echo "David Hasselhoff";
     }
 
-    // line 26
+    // line 28
     public function block_menu($context, array $blocks = array())
     {
         echo " ";
-        $this->loadTemplate("::menu.html.twig", "base.html.twig", 26)->display($context);
+        $this->loadTemplate("::menu.html.twig", "base.html.twig", 28)->display($context);
         echo " ";
     }
 
-    // line 28
+    // line 30
     public function block_contentBase($context, array $blocks = array())
     {
-        // line 29
+        // line 31
         echo "
 \t\t<div class=\"contain\">
 \t\t\t";
-        // line 31
+        // line 33
         $this->displayBlock('content', $context, $blocks);
-        // line 32
+        // line 34
         echo "\t\t</div>
 
 \t";
     }
 
-    // line 31
+    // line 33
     public function block_content($context, array $blocks = array())
     {
         echo " ";
     }
 
-    // line 36
+    // line 38
     public function block_javascript($context, array $blocks = array())
     {
         echo " ";
     }
 
-    // line 38
+    // line 40
     public function block_foot($context, array $blocks = array())
     {
         echo " ";
-        $this->loadTemplate("::foot.html.twig", "base.html.twig", 38)->display($context);
+        $this->loadTemplate("::foot.html.twig", "base.html.twig", 40)->display($context);
         echo " ";
     }
 
@@ -141,7 +146,7 @@ class __TwigTemplate_4654ae812ad54a0a85887c8709cc64bf6eccd79a0b1f31d36ec35da7d71
 
     public function getDebugInfo()
     {
-        return array (  125 => 38,  119 => 36,  113 => 31,  107 => 32,  105 => 31,  101 => 29,  98 => 28,  90 => 26,  84 => 14,  75 => 39,  73 => 38,  70 => 37,  68 => 36,  65 => 35,  63 => 28,  60 => 27,  58 => 26,  47 => 18,  40 => 14,  27 => 3,  25 => 2,);
+        return array (  130 => 40,  124 => 38,  118 => 33,  112 => 34,  110 => 33,  106 => 31,  103 => 30,  95 => 28,  89 => 14,  80 => 41,  78 => 40,  75 => 39,  73 => 38,  70 => 37,  68 => 30,  65 => 29,  63 => 28,  52 => 20,  47 => 18,  40 => 14,  27 => 3,  25 => 2,);
     }
 }
 /* {# inicializamos variable _locale para está página #}*/
@@ -162,6 +167,8 @@ class __TwigTemplate_4654ae812ad54a0a85887c8709cc64bf6eccd79a0b1f31d36ec35da7d71
 /* 	<link rel="icon" type="image/x-icon" href="" />*/
 /* */
 /* 	<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" />*/
+/* */
+/* 	<link rel="shortcut icon" type="image/png" href="{{ asset('favicon.png') }}">*/
 /* */
 /* </head>*/
 /* */

@@ -17,6 +17,10 @@ class AdminController extends Controller
 
     public function indexAction()
     {
+        //registro en el log el proceso 
+        $logger = $this->get('logger');
+        $logger->info('Mostramos la página principal de administración');
+    
         return $this->render('DHBundle:Admin:index.html.twig');
     }
 
@@ -24,6 +28,10 @@ class AdminController extends Controller
     {
         $session = $request->getSession();
  
+         //registro en el log el proceso 
+        $logger = $this->get('logger');
+        $logger->info('Login de usuario');
+
         // get the login error if there is one
         if ($request->attributes->has(SecurityContext::AUTHENTICATION_ERROR)) {
             $error = $request->attributes->get(
@@ -51,6 +59,10 @@ class AdminController extends Controller
         //$noticias = $this -> getDoctrine() -> getRepository("DHBundle:Noticias");
         //$noticias = $noticias -> findAll();
 
+        //registro en el log el proceso 
+        $logger = $this->get('logger');
+        $logger->info('Lista de noticias');
+
         return $this->render('DHBundle:Admin:news.html.twig', array('noticias' => $this->get('dh.allNews')->findAll() ));        
     }
 
@@ -63,6 +75,10 @@ class AdminController extends Controller
         // pasado al servicio
         //$new = $this -> getDoctrine() -> getRepository('DHBundle:Noticias') ->find($new_id);            
         $new = $this->get('dh.theNew')->findNew($new_id);
+
+        //registro en el log el proceso 
+        $logger = $this->get('logger');
+        $logger->info('Eliminar noticia');
 
         $em = $this->getDoctrine()->getManager();
         $em->remove($new);
@@ -87,6 +103,10 @@ class AdminController extends Controller
         $form->handleRequest($request);
      
         if ($form->isValid()) {
+            //registro en el log el proceso 
+            $logger = $this->get('logger');
+            $logger->info('insertamos la noticia');
+
             // guardar la noticia en la base de datos
             $em = $this->getDoctrine()->getManager();
             $em->persist($new);
@@ -124,6 +144,11 @@ class AdminController extends Controller
         $form->handleRequest($request);
      
         if ($form->isValid()) {
+
+            //registro en el log el proceso 
+            $logger = $this->get('logger');
+            $logger->info('Se actualiza la noticia ' .$new_id);
+
             // guardar la noticia en la base de datos
             $em = $this->getDoctrine()->getManager();
             $em->flush();

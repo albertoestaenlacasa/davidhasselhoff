@@ -69,3 +69,11 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+# MonoLog
+monolog:
+    handlers:
+        applog:
+            type: stream
+            path: ../app/logs/alberto_info.log
+            level: info
