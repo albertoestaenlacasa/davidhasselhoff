@@ -1,0 +1,74 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+
+	{% include 'DHBundle:Admin:logout.html.twig' %}
+
+	<div class="titulo">{% trans from "menu" into _locale %} STR_NEWS {% endtrans %}</div>
+
+	{# formulario #}
+
+	{{ form_start(form, {'attr': {'name': 'frm_createNew', 'novalidate': 'novalidate' }} ) }}
+
+	<div class="formStyle">
+
+		<div class="element">
+			{{ form_errors(form) }}
+		</div>
+
+		<div class="element">
+			<div class="title">
+				{{ form_label(form.titulo) }}: 
+			</div>
+			<div class="inputs">
+				{{ form_widget(form.titulo) }} {{ form_errors(form.titulo) }}
+			</div>
+		</div>
+
+		<div class="element">
+			<div class="title">
+				{{ form_label(form.descripcion) }}: 
+			</div>
+			<div class="inputs">
+				{{ form_widget(form.descripcion) }} {{ form_errors(form.descripcion) }}
+			</div>
+		</div>
+
+		<div class="element">
+			<div class="title">
+				{{ form_label(form.urlImg) }}: 
+			</div>
+			<div class="inputs">
+				{{ form_widget(form.urlImg) }} {{ form_errors(form.urlImg) }}
+			</div>
+		</div>
+
+		<div class="element">
+			<div class="title">
+				{{ form_label(form.fecha) }}:
+			</div>
+			<div class="inputs">
+				{{ form_widget(form.fecha) }} {{ form_errors(form.fecha) }}
+			</div>
+		</div>
+
+		{% if new_id is defined %}
+			<input type="hidden" id="new_id" name="new_id" value="{{ new_id }}">
+		{% endif %}
+
+	</div>
+
+	<div class="botones floatLeft">
+		
+		<input class="boton" type="button" value="{% trans from "content" into _locale %} admin.btn_back {% endtrans %}" onclick="window.location.href='{{ url('dh_admin_news') }}'">
+
+		{{ form_widget(form.save) }}
+
+	</div>
+
+
+	{{ form_end(form) }}
+
+
+{% endblock %}
+

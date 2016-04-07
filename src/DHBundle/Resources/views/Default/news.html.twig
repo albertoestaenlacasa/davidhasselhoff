@@ -2,7 +2,7 @@
 
 {% block content %}
 
-	<div class="titulo">**Noticias**</div>
+	<div class="titulo">{% trans from "menu" into _locale %} STR_NEWS {% endtrans %}</div>
 
 	<ul>
 		{% for noticia in noticias %}

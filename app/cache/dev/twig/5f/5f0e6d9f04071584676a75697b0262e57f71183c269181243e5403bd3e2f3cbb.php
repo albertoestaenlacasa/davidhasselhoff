@@ -21,26 +21,29 @@ class __TwigTemplate_6f3f977dff06a7214641f9f4e5f7597f3ab43f0cec320404c9e54d84b8c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_64dcd7e7e5beec039e465eae0b2d42e1bfe8dbbf98cf637ec12d4bac49e40baf = $this->env->getExtension("native_profiler");
-        $__internal_64dcd7e7e5beec039e465eae0b2d42e1bfe8dbbf98cf637ec12d4bac49e40baf->enter($__internal_64dcd7e7e5beec039e465eae0b2d42e1bfe8dbbf98cf637ec12d4bac49e40baf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@DH/Admin/login.html.twig"));
+        $__internal_b4ec00f0c02239296c8f40f92694b911e3adade4021282a343d1340355992598 = $this->env->getExtension("native_profiler");
+        $__internal_b4ec00f0c02239296c8f40f92694b911e3adade4021282a343d1340355992598->enter($__internal_b4ec00f0c02239296c8f40f92694b911e3adade4021282a343d1340355992598_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@DH/Admin/login.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_64dcd7e7e5beec039e465eae0b2d42e1bfe8dbbf98cf637ec12d4bac49e40baf->leave($__internal_64dcd7e7e5beec039e465eae0b2d42e1bfe8dbbf98cf637ec12d4bac49e40baf_prof);
+        $__internal_b4ec00f0c02239296c8f40f92694b911e3adade4021282a343d1340355992598->leave($__internal_b4ec00f0c02239296c8f40f92694b911e3adade4021282a343d1340355992598_prof);
 
     }
 
     // line 3
     public function block_content($context, array $blocks = array())
     {
-        $__internal_91714a384999c896ef84264b085e3839b5c760a8ff5973853118d2b945533f30 = $this->env->getExtension("native_profiler");
-        $__internal_91714a384999c896ef84264b085e3839b5c760a8ff5973853118d2b945533f30->enter($__internal_91714a384999c896ef84264b085e3839b5c760a8ff5973853118d2b945533f30_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_dfe8a451da371051581f10977ddc944e23a58d9451fa147be6321fbdddbe222f = $this->env->getExtension("native_profiler");
+        $__internal_dfe8a451da371051581f10977ddc944e23a58d9451fa147be6321fbdddbe222f->enter($__internal_dfe8a451da371051581f10977ddc944e23a58d9451fa147be6321fbdddbe222f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 4
         echo "
 \t<div class=\"contain\">
 
-\t\t<h1>**Login**</h1>
+\t\t<h1>";
+        // line 7
+        echo $this->env->getExtension('translator')->getTranslator()->trans("admin.login", array(), "content", (isset($context["_locale"]) ? $context["_locale"] : $this->getContext($context, "_locale")));
+        echo "</h1>
 
 
 \t\t";
@@ -60,7 +63,10 @@ class __TwigTemplate_6f3f977dff06a7214641f9f4e5f7597f3ab43f0cec320404c9e54d84b8c
         echo $this->env->getExtension('routing')->getUrl("login_check");
         echo "\" method=\"post\">
 
-\t\t    <label for=\"username\">**Username**:</label>
+\t\t    <label for=\"username\">";
+        // line 17
+        echo $this->env->getExtension('translator')->getTranslator()->trans("admin.username", array(), "content", (isset($context["_locale"]) ? $context["_locale"] : $this->getContext($context, "_locale")));
+        echo ":</label>
 \t\t    <input type=\"text\" id=\"username\" name=\"_username\" value=\"";
         // line 18
         echo twig_escape_filter($this->env, (isset($context["last_username"]) ? $context["last_username"] : $this->getContext($context, "last_username")), "html", null, true);
@@ -68,7 +74,10 @@ class __TwigTemplate_6f3f977dff06a7214641f9f4e5f7597f3ab43f0cec320404c9e54d84b8c
 \t\t 
 \t\t \t<br><br>
 
-\t\t    <label for=\"password\">**Password**:</label>
+\t\t    <label for=\"password\">";
+        // line 22
+        echo $this->env->getExtension('translator')->getTranslator()->trans("admin.password", array(), "content", (isset($context["_locale"]) ? $context["_locale"] : $this->getContext($context, "_locale")));
+        echo ":</label>
 \t\t    <input type=\"password\" id=\"password\" name=\"_password\" />
 \t\t 
 \t\t    ";
@@ -76,7 +85,10 @@ class __TwigTemplate_6f3f977dff06a7214641f9f4e5f7597f3ab43f0cec320404c9e54d84b8c
         echo "\t\t 
 \t\t \t<br><br>
 
-\t\t    <button type=\"submit\">**login**</button>
+\t\t    <button class=\"boton\" type=\"submit\">";
+        // line 33
+        echo $this->env->getExtension('translator')->getTranslator()->trans("admin.loginEnter", array(), "content", (isset($context["_locale"]) ? $context["_locale"] : $this->getContext($context, "_locale")));
+        echo "</button>
 
 \t\t</form>
 
@@ -85,7 +97,7 @@ class __TwigTemplate_6f3f977dff06a7214641f9f4e5f7597f3ab43f0cec320404c9e54d84b8c
 
 ";
         
-        $__internal_91714a384999c896ef84264b085e3839b5c760a8ff5973853118d2b945533f30->leave($__internal_91714a384999c896ef84264b085e3839b5c760a8ff5973853118d2b945533f30_prof);
+        $__internal_dfe8a451da371051581f10977ddc944e23a58d9451fa147be6321fbdddbe222f->leave($__internal_dfe8a451da371051581f10977ddc944e23a58d9451fa147be6321fbdddbe222f_prof);
 
     }
 
@@ -101,7 +113,7 @@ class __TwigTemplate_6f3f977dff06a7214641f9f4e5f7597f3ab43f0cec320404c9e54d84b8c
 
     public function getDebugInfo()
     {
-        return array (  76 => 30,  66 => 18,  60 => 15,  56 => 13,  50 => 11,  48 => 10,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  90 => 33,  85 => 30,  79 => 22,  72 => 18,  68 => 17,  63 => 15,  59 => 13,  53 => 11,  51 => 10,  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends '::base.html.twig' %}*/
@@ -110,7 +122,7 @@ class __TwigTemplate_6f3f977dff06a7214641f9f4e5f7597f3ab43f0cec320404c9e54d84b8c
 /* */
 /* 	<div class="contain">*/
 /* */
-/* 		<h1>**Login**</h1>*/
+/* 		<h1>{% trans from "content" into _locale %} admin.login {% endtrans %}</h1>*/
 /* */
 /* */
 /* 		{% if error %}*/
@@ -120,12 +132,12 @@ class __TwigTemplate_6f3f977dff06a7214641f9f4e5f7597f3ab43f0cec320404c9e54d84b8c
 /* 		<center>*/
 /* 		<form action="{{ url('login_check') }}" method="post">*/
 /* */
-/* 		    <label for="username">**Username**:</label>*/
+/* 		    <label for="username">{% trans from "content" into _locale %} admin.username {% endtrans %}:</label>*/
 /* 		    <input type="text" id="username" name="_username" value="{{ last_username }}" />*/
 /* 		 */
 /* 		 	<br><br>*/
 /* */
-/* 		    <label for="password">**Password**:</label>*/
+/* 		    <label for="password">{% trans from "content" into _locale %} admin.password {% endtrans %}:</label>*/
 /* 		    <input type="password" id="password" name="_password" />*/
 /* 		 */
 /* 		    {#*/
@@ -136,7 +148,7 @@ class __TwigTemplate_6f3f977dff06a7214641f9f4e5f7597f3ab43f0cec320404c9e54d84b8c
 /* 		 */
 /* 		 	<br><br>*/
 /* */
-/* 		    <button type="submit">**login**</button>*/
+/* 		    <button class="boton" type="submit">{% trans from "content" into _locale %} admin.loginEnter {% endtrans %}</button>*/
 /* */
 /* 		</form>*/
 /* */

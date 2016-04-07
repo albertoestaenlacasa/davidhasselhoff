@@ -15,8 +15,8 @@ class __TwigTemplate_23d1572fb5dbfc0ed46fa6b9b0a3ad652612f4763cef3740dd365961d9e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2b59b6d29897d9e7514a33649e51eaff1f9de8cba70f097a0501f7994cb4e097 = $this->env->getExtension("native_profiler");
-        $__internal_2b59b6d29897d9e7514a33649e51eaff1f9de8cba70f097a0501f7994cb4e097->enter($__internal_2b59b6d29897d9e7514a33649e51eaff1f9de8cba70f097a0501f7994cb4e097_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MyRecipesBundle:Author:showAuthors.html.twig"));
+        $__internal_be5b6c7c6f66d7c6aa7cf19cdf55bb81109859b66f80bd5615a558462ff2760b = $this->env->getExtension("native_profiler");
+        $__internal_be5b6c7c6f66d7c6aa7cf19cdf55bb81109859b66f80bd5615a558462ff2760b->enter($__internal_be5b6c7c6f66d7c6aa7cf19cdf55bb81109859b66f80bd5615a558462ff2760b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MyRecipesBundle:Author:showAuthors.html.twig"));
 
         // line 1
         echo "
@@ -41,7 +41,7 @@ class __TwigTemplate_23d1572fb5dbfc0ed46fa6b9b0a3ad652612f4763cef3740dd365961d9e
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['autor'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_2b59b6d29897d9e7514a33649e51eaff1f9de8cba70f097a0501f7994cb4e097->leave($__internal_2b59b6d29897d9e7514a33649e51eaff1f9de8cba70f097a0501f7994cb4e097_prof);
+        $__internal_be5b6c7c6f66d7c6aa7cf19cdf55bb81109859b66f80bd5615a558462ff2760b->leave($__internal_be5b6c7c6f66d7c6aa7cf19cdf55bb81109859b66f80bd5615a558462ff2760b_prof);
 
     }
 

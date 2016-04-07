@@ -29,3 +29,19 @@ login_check:
 
 logout:
     path:      /logout
+
+dh_admin_news:
+    path:     /admin/noticias
+    defaults: { _controller: DHBundle:Admin:news }
+
+dh_admin_news_new:
+    path:     /admin/noticias/nuevo
+    defaults: { _controller: DHBundle:Admin:createNew }
+
+dh_admin_news_update:
+    path:     /admin/noticias/actualizar
+    defaults: { _controller: DHBundle:Admin:updateNew }
+
+dh_admin_news_delete:
+    path:     /admin/noticias/eliminar
+    defaults: { _controller: DHBundle:Admin:deleteNew }

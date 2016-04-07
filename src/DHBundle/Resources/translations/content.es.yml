@@ -1,2 +1,12 @@
 admin.STR_ADMIN: Administración
 admin.STR_LOGOUT: Cerrar sesión
+admin.login: Iniciar sesión
+admin.username: Usuario
+admin.password: Contraseña
+admin.loginEnter: Entrar
+admin.btn_back: Volver
+admin.btn_new: Nuevo
+admin.btn_edit: Editar
+admin.btn_delete: Eliminar
+admin.alert_SelectaAnyNew: Has de seleccionar alguna noticia
+admin.alert_confirmDeleteNew: ¿Seguro que quieres eliminar la noticia?

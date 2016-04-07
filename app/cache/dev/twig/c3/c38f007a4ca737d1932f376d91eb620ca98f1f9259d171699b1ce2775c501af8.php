@@ -15,13 +15,13 @@ class __TwigTemplate_1d0c4ab8aa3b408c187787994f44134b2f330f46266701143aa6474d6a2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_29549b26156c75a5c45050033154eeff6a2f8ae77af5ce5f29f5b7e12fe60f3d = $this->env->getExtension("native_profiler");
-        $__internal_29549b26156c75a5c45050033154eeff6a2f8ae77af5ce5f29f5b7e12fe60f3d->enter($__internal_29549b26156c75a5c45050033154eeff6a2f8ae77af5ce5f29f5b7e12fe60f3d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MyRecipesBundle:Default:index.html.twig"));
+        $__internal_1d40a2be89f57984ff1d4b6cbc49a12a0b141a34da1c35faec039cf9c60a3561 = $this->env->getExtension("native_profiler");
+        $__internal_1d40a2be89f57984ff1d4b6cbc49a12a0b141a34da1c35faec039cf9c60a3561->enter($__internal_1d40a2be89f57984ff1d4b6cbc49a12a0b141a34da1c35faec039cf9c60a3561_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MyRecipesBundle:Default:index.html.twig"));
 
         // line 1
         echo "Hola mundo 2!!";
         
-        $__internal_29549b26156c75a5c45050033154eeff6a2f8ae77af5ce5f29f5b7e12fe60f3d->leave($__internal_29549b26156c75a5c45050033154eeff6a2f8ae77af5ce5f29f5b7e12fe60f3d_prof);
+        $__internal_1d40a2be89f57984ff1d4b6cbc49a12a0b141a34da1c35faec039cf9c60a3561->leave($__internal_1d40a2be89f57984ff1d4b6cbc49a12a0b141a34da1c35faec039cf9c60a3561_prof);
 
     }
 

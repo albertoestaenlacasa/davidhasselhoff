@@ -3,6 +3,7 @@
 namespace DHBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Noticias
@@ -16,6 +17,7 @@ class Noticias
 
     /**
      * @var string
+     * @Assert\NotBlank()
      */
     private $titulo;
 
@@ -26,6 +28,8 @@ class Noticias
 
     /**
      * @var \DateTime
+     * @Assert\NotBlank()
+     * @Assert\Type("\DateTime")
      */
     private $fecha;
 

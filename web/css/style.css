@@ -89,3 +89,68 @@
 .logoutText:hover{
 	color:grey;
 }
+
+.botones{
+	clear: both;
+	margin-top:40px;
+}
+
+.boton {
+	padding: 10px;
+	margin:5px;
+	font-size: 15px;
+	background-color: black;
+	color: white;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.boton:hover{
+	background-color: white;
+	color:black;
+}
+
+.formStyle {
+	padding: 20px;
+	display: block;
+	float: left;
+	font-size:16px;
+	background-color: lightgray;
+}
+
+.formStyle .element{
+	padding:10px;
+}
+
+.formStyle .element div{
+	display: inline-block;
+}
+
+.formStyle .element div.title{
+	width: 200px;
+	text-align: right;
+	vertical-align: top;
+}
+
+.formStyle .element div.inputs{
+	padding-right: 100px;
+}
+
+footer {
+	clear: both;
+	padding:50px 5px;
+	text-align: center;
+}
+
+textarea{
+	width: 500px;
+	height:200px;
+}
+
+.floatRight{
+	float: right;
+}
+
+.floatLeft{
+	float: left;
+}

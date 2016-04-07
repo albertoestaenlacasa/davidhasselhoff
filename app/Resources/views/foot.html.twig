@@ -1,14 +1,7 @@
 {% block foot %}
 
-	<style type="text/css">
-		footer {
-			padding:50px 5px;
-			text-align: center;
-		}
-	</style>
-
 	<footer>
-		{% trans from "menu" into _locale %} STR_CONTACT {% endtrans %} : <a href="mailto:{{ contact_email }}"> {{ contact_email }} </a>
+			{% trans from "menu" into _locale %} STR_CONTACT {% endtrans %} : <a href="mailto:{{ contact_email }}"> {{ contact_email }} </a>
 	</footer>
 
 {% endblock %}

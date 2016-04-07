@@ -15,8 +15,8 @@ class __TwigTemplate_1fcf6d57515ca2c608a2ee0252cf62516b3fc1862ff7dfb9795a48090a2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c9cb097fb2fb3f0137da17e0106b12b9abe8e9147714edc2bbcda0be468150b5 = $this->env->getExtension("native_profiler");
-        $__internal_c9cb097fb2fb3f0137da17e0106b12b9abe8e9147714edc2bbcda0be468150b5->enter($__internal_c9cb097fb2fb3f0137da17e0106b12b9abe8e9147714edc2bbcda0be468150b5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DHBundle:Admin:logout.html.twig"));
+        $__internal_49b125b6d13082c646250758035dc3acbb89c5dbda9fc44620ac2fe19de55885 = $this->env->getExtension("native_profiler");
+        $__internal_49b125b6d13082c646250758035dc3acbb89c5dbda9fc44620ac2fe19de55885->enter($__internal_49b125b6d13082c646250758035dc3acbb89c5dbda9fc44620ac2fe19de55885_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DHBundle:Admin:logout.html.twig"));
 
         // line 1
         echo "
@@ -37,7 +37,7 @@ class __TwigTemplate_1fcf6d57515ca2c608a2ee0252cf62516b3fc1862ff7dfb9795a48090a2
 \t</div>
 </div>";
         
-        $__internal_c9cb097fb2fb3f0137da17e0106b12b9abe8e9147714edc2bbcda0be468150b5->leave($__internal_c9cb097fb2fb3f0137da17e0106b12b9abe8e9147714edc2bbcda0be468150b5_prof);
+        $__internal_49b125b6d13082c646250758035dc3acbb89c5dbda9fc44620ac2fe19de55885->leave($__internal_49b125b6d13082c646250758035dc3acbb89c5dbda9fc44620ac2fe19de55885_prof);
 
     }
 

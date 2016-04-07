@@ -1,2 +1,13 @@
 admin.STR_ADMIN: Administration
 admin.STR_LOGOUT: Logout
+admin.login: Login
+admin.username: Username
+admin.password: Pasword
+admin.loginEnter: Enter
+admin.btn_back: Back
+admin.btn_new: New
+admin.btn_edit: Edit
+admin.btn_delete: Delete
+admin.alert_SelectaAnyNew: Do yo need select some new.
+admin.alert_confirmDeleteNew: Are you sure that do yo like delete the new?
+

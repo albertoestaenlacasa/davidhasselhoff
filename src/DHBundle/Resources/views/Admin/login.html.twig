@@ -4,7 +4,7 @@
 
 	<div class="contain">
 
-		<h1>**Login**</h1>
+		<h1>{% trans from "content" into _locale %} admin.login {% endtrans %}</h1>
 
 
 		{% if error %}
@@ -14,12 +14,12 @@
 		<center>
 		<form action="{{ url('login_check') }}" method="post">
 
-		    <label for="username">**Username**:</label>
+		    <label for="username">{% trans from "content" into _locale %} admin.username {% endtrans %}:</label>
 		    <input type="text" id="username" name="_username" value="{{ last_username }}" />
 		 
 		 	<br><br>
 
-		    <label for="password">**Password**:</label>
+		    <label for="password">{% trans from "content" into _locale %} admin.password {% endtrans %}:</label>
 		    <input type="password" id="password" name="_password" />
 		 
 		    {#
@@ -30,7 +30,7 @@
 		 
 		 	<br><br>
 
-		    <button type="submit">**login**</button>
+		    <button class="boton" type="submit">{% trans from "content" into _locale %} admin.loginEnter {% endtrans %}</button>
 
 		</form>
 

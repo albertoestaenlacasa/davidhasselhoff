@@ -21,20 +21,20 @@ class __TwigTemplate_83f756daadf10b3fe630fd8af06c5393654e1759924d9775aa22a520ac9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ec3b1e0076067ad8053f947143e29b97fd78eccbc75dab6637fd3741dccbc31f = $this->env->getExtension("native_profiler");
-        $__internal_ec3b1e0076067ad8053f947143e29b97fd78eccbc75dab6637fd3741dccbc31f->enter($__internal_ec3b1e0076067ad8053f947143e29b97fd78eccbc75dab6637fd3741dccbc31f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DHBundle:Admin:index.html.twig"));
+        $__internal_082ad9134db1667c8f2f637d9eca8bc62fd6716d606860828f7f08b8e40b01ab = $this->env->getExtension("native_profiler");
+        $__internal_082ad9134db1667c8f2f637d9eca8bc62fd6716d606860828f7f08b8e40b01ab->enter($__internal_082ad9134db1667c8f2f637d9eca8bc62fd6716d606860828f7f08b8e40b01ab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DHBundle:Admin:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_ec3b1e0076067ad8053f947143e29b97fd78eccbc75dab6637fd3741dccbc31f->leave($__internal_ec3b1e0076067ad8053f947143e29b97fd78eccbc75dab6637fd3741dccbc31f_prof);
+        $__internal_082ad9134db1667c8f2f637d9eca8bc62fd6716d606860828f7f08b8e40b01ab->leave($__internal_082ad9134db1667c8f2f637d9eca8bc62fd6716d606860828f7f08b8e40b01ab_prof);
 
     }
 
     // line 3
     public function block_content($context, array $blocks = array())
     {
-        $__internal_fbea30d1d2ed8a9f6050c0643c464e6aefb42473aa804fa5eb587acc5fd5e7c6 = $this->env->getExtension("native_profiler");
-        $__internal_fbea30d1d2ed8a9f6050c0643c464e6aefb42473aa804fa5eb587acc5fd5e7c6->enter($__internal_fbea30d1d2ed8a9f6050c0643c464e6aefb42473aa804fa5eb587acc5fd5e7c6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_0fe46f654e482a4c9eaf04e80319059b639889cfca9aeb48779a9dde7f0bfcf5 = $this->env->getExtension("native_profiler");
+        $__internal_0fe46f654e482a4c9eaf04e80319059b639889cfca9aeb48779a9dde7f0bfcf5->enter($__internal_0fe46f654e482a4c9eaf04e80319059b639889cfca9aeb48779a9dde7f0bfcf5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 4
         echo "
@@ -44,13 +44,33 @@ class __TwigTemplate_83f756daadf10b3fe630fd8af06c5393654e1759924d9775aa22a520ac9
         // line 6
         echo "
 \t<div class=\"realContain\">
-\t\tjsaklfasklfajlksdsa
-\t\ta
+\t\t
+\t\t<ul>
+\t\t\t<li><a href=\"";
+        // line 10
+        echo $this->env->getExtension('routing')->getUrl("dh_admin_news");
+        echo "\">";
+        echo $this->env->getExtension('translator')->getTranslator()->trans("STR_NEWS", array(), "menu", (isset($context["_locale"]) ? $context["_locale"] : $this->getContext($context, "_locale")));
+        echo "</a></li>
+\t\t\t<li>";
+        // line 11
+        echo $this->env->getExtension('translator')->getTranslator()->trans("STR_MOVIES", array(), "menu", (isset($context["_locale"]) ? $context["_locale"] : $this->getContext($context, "_locale")));
+        echo "</li>
+\t\t\t<li>";
+        // line 12
+        echo $this->env->getExtension('translator')->getTranslator()->trans("STR_MUSIC", array(), "menu", (isset($context["_locale"]) ? $context["_locale"] : $this->getContext($context, "_locale")));
+        echo "</li>
+\t\t\t<li>";
+        // line 13
+        echo $this->env->getExtension('translator')->getTranslator()->trans("STR_GLOSARY", array(), "menu", (isset($context["_locale"]) ? $context["_locale"] : $this->getContext($context, "_locale")));
+        echo "</li>
+\t\t</ul>
+
 \t</diV>
 
 ";
         
-        $__internal_fbea30d1d2ed8a9f6050c0643c464e6aefb42473aa804fa5eb587acc5fd5e7c6->leave($__internal_fbea30d1d2ed8a9f6050c0643c464e6aefb42473aa804fa5eb587acc5fd5e7c6_prof);
+        $__internal_0fe46f654e482a4c9eaf04e80319059b639889cfca9aeb48779a9dde7f0bfcf5->leave($__internal_0fe46f654e482a4c9eaf04e80319059b639889cfca9aeb48779a9dde7f0bfcf5_prof);
 
     }
 
@@ -66,7 +86,7 @@ class __TwigTemplate_83f756daadf10b3fe630fd8af06c5393654e1759924d9775aa22a520ac9
 
     public function getDebugInfo()
     {
-        return array (  45 => 6,  43 => 5,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  65 => 13,  61 => 12,  57 => 11,  51 => 10,  45 => 6,  43 => 5,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends '::base.html.twig' %}*/
@@ -76,8 +96,14 @@ class __TwigTemplate_83f756daadf10b3fe630fd8af06c5393654e1759924d9775aa22a520ac9
 /* 	{% include 'DHBundle:Admin:logout.html.twig' %}*/
 /* */
 /* 	<div class="realContain">*/
-/* 		jsaklfasklfajlksdsa*/
-/* 		a*/
+/* 		*/
+/* 		<ul>*/
+/* 			<li><a href="{{ url('dh_admin_news') }}">{% trans from "menu" into _locale %} STR_NEWS {% endtrans %}</a></li>*/
+/* 			<li>{% trans from "menu" into _locale %} STR_MOVIES {% endtrans %}</li>*/
+/* 			<li>{% trans from "menu" into _locale %} STR_MUSIC {% endtrans %}</li>*/
+/* 			<li>{% trans from "menu" into _locale %} STR_GLOSARY {% endtrans %}</li>*/
+/* 		</ul>*/
+/* */
 /* 	</diV>*/
 /* */
 /* {% endblock %}*/

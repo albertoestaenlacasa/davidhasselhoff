@@ -158,6 +158,29 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        if (0 === strpos($pathinfo, '/admin/noticias')) {
+            // dh_admin_news
+            if ($pathinfo === '/admin/noticias') {
+                return array (  '_controller' => 'DHBundle\\Controller\\AdminController::newsAction',  '_route' => 'dh_admin_news',);
+            }
+
+            // dh_admin_news_new
+            if ($pathinfo === '/admin/noticias/nuevo') {
+                return array (  '_controller' => 'DHBundle\\Controller\\AdminController::createNewAction',  '_route' => 'dh_admin_news_new',);
+            }
+
+            // dh_admin_news_update
+            if ($pathinfo === '/admin/noticias/actualizar') {
+                return array (  '_controller' => 'DHBundle\\Controller\\AdminController::updateNewAction',  '_route' => 'dh_admin_news_update',);
+            }
+
+            // dh_admin_news_delete
+            if ($pathinfo === '/admin/noticias/eliminar') {
+                return array (  '_controller' => 'DHBundle\\Controller\\AdminController::deleteNewAction',  '_route' => 'dh_admin_news_delete',);
+            }
+
+        }
+
         // my_recipes_homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
