@@ -10,19 +10,6 @@ use DHBundle\Entity\Noticias;
 class DefaultController extends Controller
 {
 
-    public function changeLangAction($lang)
-    {
-        $this->get('session')->set('_locale', $lang);
-        $this->getRequest()->setlocale($lang);
-
-        //registro en el log el proceso 
-        $logger = $this->get('logger');
-        $logger->info('Cambiado idioma a '.$lang);
-
-        return $this->redirectToRoute('dh_homepage');
-   }
-
-
     public function indexAction()
     {
         //registro en el log el proceso 
@@ -53,5 +40,19 @@ class DefaultController extends Controller
 
         return $this->render('DHBundle:Default:fullnew.html.twig', array('noticia' => $this->get('dh.theNew')->findNew($id) ));    	
     }
+
+    public function changeLangAction($lang, Request $request)
+    {
+        $this->get('session')->set('_locale', $lang);
+        $request->setlocale($lang);
+
+        //registro en el log el proceso 
+        $logger = $this->get('logger');
+        $logger->info('Cambiado idioma a '.$lang);
+
+        return $this->redirectToRoute('dh_homepage');
+   }
+
+
 
 }
