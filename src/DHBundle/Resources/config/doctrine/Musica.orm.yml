@@ -1,0 +1,25 @@
+DHBundle\Entity\Musica:
+    type: entity
+    table: null
+    repositoryClass: DHBundle\Repository\MusicaRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titulo:
+            type: string
+            length: 255
+        descripcion:
+            type: text
+            nullable: true
+        fecha:
+            type: date
+        urlImg:
+            type: string
+            length: 255
+            nullable: true
+            column: url_img
+    lifecycleCallbacks: {  }

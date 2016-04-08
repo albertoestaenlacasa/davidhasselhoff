@@ -19,8 +19,8 @@
                 <target>Music</target>
             </trans-unit>
             <trans-unit id="5">
-                <source>STR_GLOSARY</source>
-                <target>Glosary</target>
+                <source>STR_GALERY</source>
+                <target>Galery</target>
             </trans-unit>
             <trans-unit id="6">
                 <source>STR_ADMIN</source>

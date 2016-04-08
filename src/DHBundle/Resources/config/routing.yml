@@ -10,6 +10,26 @@ dh_fullnew:
     path:     /noticias/{id}/{titulo}
     defaults: { _controller: DHBundle:Default:fullnew }
 
+dh_music:
+    path:     /musica
+    defaults: { _controller: DHBundle:Default:music }
+
+dh_fullmusic:
+    path:     /musica/{id}/{titulo}
+    defaults: { _controller: DHBundle:Default:fullmusic }
+
+dh_movies:
+    path:     /peliculas
+    defaults: { _controller: DHBundle:Default:movies }
+
+dh_fullmovie:
+    path:     /peliculas/{id}/{titulo}
+    defaults: { _controller: DHBundle:Default:fullmovie }
+
+dh_galery:
+    path:     /galeria
+    defaults: { _controller: DHBundle:Default:galery }
+
 dh_changeLang:
     path:     /idioma/{lang}
     defaults: {_controller: DHBundle:Default:changeLang, lang: es }
@@ -45,3 +65,15 @@ dh_admin_news_update:
 dh_admin_news_delete:
     path:     /admin/noticias/eliminar
     defaults: { _controller: DHBundle:Admin:deleteNew }
+
+dh_admin_galery:
+    path:     /admin/galeria
+    defaults: { _controller: DHBundle:Admin:galery }
+
+dh_admin_galery_new:
+    path:     /admin/galeria/nuevo
+    defaults: { _controller: DHBundle:Admin:galeryNew }
+
+dh_admin_galery_delete:
+    path:     /admin/galeria/eliminar
+    defaults: { _controller: DHBundle:Admin:deleteGalery }

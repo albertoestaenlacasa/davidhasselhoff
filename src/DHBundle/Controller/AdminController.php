@@ -4,7 +4,10 @@ namespace DHBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+
+//entidades
 use DHBundle\Entity\Noticias;
+use DHBundle\Entity\Galeria;
 
 use Symfony\Component\Security\Core\SecurityContext;
 
@@ -163,6 +166,61 @@ class AdminController extends Controller
         //return new Response(dump($form));
 
     }
+
+    // ADMINISTRAR GLOSARIO
+    public function galeryAction()
+    {
+        $galeria = $this -> getDoctrine() -> getRepository("DHBundle:Galeria");
+        $galeria = $galeria -> findAll();
+
+        return $this->render('DHBundle:Admin:galery.html.twig', array('galeria' => $galeria ));        
+    }
+
+    public function deleteGaleryAction()
+    {       
+        //recibir formulario
+        $form = Request::createFromGlobals();
+        $galery_id = $form->request->get('galery_id');
+
+        $new = $this -> getDoctrine() -> getRepository('DHBundle:Galeria') ->find($galery_id);            
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($new);
+        $em->flush();
+ 
+       return $this->redirect($this->generateUrl('dh_admin_galery'));
+    }
+
+    public function galeryNewAction(Request $request)
+    {   
+        // crear un objeto $Galeria nuevo
+        $new = new Galeria();
+     
+        $form = $this->createFormBuilder($new)
+            ->add('titulo', 'text', array('attr' => array('style' => 'width: 500px'), 'required' => false ))
+            ->add('urlImg', 'text', array('attr' => array('style' => 'width: 500px') ))
+            ->add('save', 'submit', array('label' => '**Aceptar**', 'attr' => array('class' => 'boton') ))
+            ->getForm();
+     
+        $form->handleRequest($request);
+     
+        if ($form->isValid()) {
+
+            // guardar la noticia en la base de datos
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($new);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('dh_admin_galery'));
+        }
+
+        return $this->render('DHBundle:Admin:addImageGalery.html.twig', array(
+            'form' => $form->createView()
+        ));
+
+    }
+
+
 
 
 }

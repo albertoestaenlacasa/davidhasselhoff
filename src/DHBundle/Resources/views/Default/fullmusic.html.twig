@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+
+	<div class="titulo">{{ musica.titulo }}</div>
+
+	<div class="realContain">
+
+		{{ musica.descripcion }} 
+
+		<br><br>
+
+		<img src="{{ musica.urlImg }}" width="80%" />
+
+	</div>				
+
+{% endblock %}

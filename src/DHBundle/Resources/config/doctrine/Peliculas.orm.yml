@@ -1,0 +1,31 @@
+DHBundle\Entity\Peliculas:
+    type: entity
+    table: null
+    repositoryClass: DHBundle\Repository\PeliculasRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titulo:
+            type: string
+            length: 255
+        director:
+            type: string
+            length: 255
+        genero:
+            type: string
+            length: '50'
+        sinopsis:
+            type: text
+            nullable: true
+        fecha:
+            type: date
+        urlImg:
+            type: string
+            length: 255
+            nullable: true
+            column: url_img
+    lifecycleCallbacks: {  }

@@ -10,3 +10,5 @@ admin.btn_edit: Editar
 admin.btn_delete: Eliminar
 admin.alert_SelectaAnyNew: Has de seleccionar alguna noticia
 admin.alert_confirmDeleteNew: ¿Estas segur que volvs eliminar aquesta noticia?
+admin.alert_SelectaAnyGalery: Has de seleccionar alguna imatge
+admin.alert_confirmDeleteGalery: ¿Estás segur que vols eliminar aquesta imatge?

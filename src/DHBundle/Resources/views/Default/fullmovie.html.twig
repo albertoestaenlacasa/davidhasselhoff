@@ -1,0 +1,20 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+
+	<div class="titulo">{{ pelicula.titulo }}</div>
+
+	<div class="realContain">
+
+		{{ pelicula.director }} 
+		<br><br>
+		{{ pelicula.genero }} 
+		<br><br>
+		{{ pelicula.sinopsis }} 
+		<br><br>
+
+		<img src="{{ pelicula.urlImg }}" width="80%" />
+
+	</div>				
+
+{% endblock %}

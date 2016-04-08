@@ -155,3 +155,11 @@ textarea{
 .floatLeft{
 	float: left;
 }
+
+.galeria {
+	width: 340px;
+	padding: 10px;
+	float:left;
+	display: inline-block;
+	text-align: center;
+}

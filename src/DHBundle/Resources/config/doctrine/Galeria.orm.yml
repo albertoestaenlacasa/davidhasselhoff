@@ -1,0 +1,20 @@
+DHBundle\Entity\Galeria:
+    type: entity
+    table: null
+    repositoryClass: DHBundle\Repository\GaleriaRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titulo:
+            type: string
+            length: 255
+            nullable: true
+        urlImg:
+            type: string
+            length: 255
+            column: url_img
+    lifecycleCallbacks: {  }

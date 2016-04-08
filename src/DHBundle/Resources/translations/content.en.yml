@@ -10,4 +10,6 @@ admin.btn_edit: Edit
 admin.btn_delete: Delete
 admin.alert_SelectaAnyNew: Do yo need select some new.
 admin.alert_confirmDeleteNew: Are you sure that do yo like delete the new?
+admin.alert_SelectaAnyGalery: Do yo need select some image.
+admin.alert_confirmDeleteGalery: Are you sure that do yo like delete the image?
 

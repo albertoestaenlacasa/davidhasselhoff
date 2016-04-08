@@ -24,11 +24,11 @@
 				<img src="{{ asset('images/icon-login.png') }}" title="{% trans from "menu" into _locale %} STR_ADMIN {% endtrans %}" /></a>
 			</div>
 
-			<div><a href="">{% trans from "menu" into _locale %} STR_GLOSARY {% endtrans %}</a></div>
+			<div><a href="{{ url('dh_galery') }}">{% trans from "menu" into _locale %} STR_GALERY {% endtrans %}</a></div>
 
-			<div><a href="">{% trans from "menu" into _locale %} STR_MUSIC {% endtrans %}</a></div>
+			<div><a href="{{ url('dh_music') }}">{% trans from "menu" into _locale %} STR_MUSIC {% endtrans %}</a></div>
 
-			<div><a href="">{% trans from "menu" into _locale %} STR_MOVIES {% endtrans %}</a></div>
+			<div><a href="{{ url('dh_movies') }}">{% trans from "menu" into _locale %} STR_MOVIES {% endtrans %}</a></div>
 
 			<div><a href="{{ url('dh_news') }}">{% trans from "menu" into _locale %} STR_NEWS {% endtrans %}</a></div>
 

@@ -4,7 +4,11 @@ namespace DHBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+// entidades
 use DHBundle\Entity\Noticias;
+use DHBundle\Entity\Musica;
+use DHBundle\Entity\Peliculas;
+use DHBundle\Entity\Galeria;
 
 
 class DefaultController extends Controller
@@ -19,6 +23,7 @@ class DefaultController extends Controller
         return $this->render('DHBundle:Default:index.html.twig');
     }
 
+    // NOTICIAS
     public function newsAction()
     {
         //registro en el log el proceso 
@@ -41,6 +46,53 @@ class DefaultController extends Controller
         return $this->render('DHBundle:Default:fullnew.html.twig', array('noticia' => $this->get('dh.theNew')->findNew($id) ));    	
     }
 
+    // MUSICA
+    public function musicAction()
+    {
+
+        $musicas = $this -> getDoctrine() -> getRepository("DHBundle:Musica");
+        $musicas = $musicas -> findAll();
+
+        return $this->render('DHBundle:Default:music.html.twig', array('musicas' => $musicas ));     
+    }
+
+    public function fullmusicAction($id)
+    {
+        $musica = $this -> getDoctrine() -> getRepository("DHBundle:Musica");
+        $musica = $musica -> find($id);
+
+        return $this->render('DHBundle:Default:fullmusic.html.twig', array('musica' => $musica ));     
+    }
+
+    // PELICULAS
+    public function moviesAction()
+    {
+
+        $peliculas = $this -> getDoctrine() -> getRepository("DHBundle:Peliculas");
+        $peliculas = $peliculas -> findAll();
+
+        return $this->render('DHBundle:Default:movies.html.twig', array('peliculas' => $peliculas ));     
+    }
+
+    public function fullmovieAction($id)
+    {
+        $pelicula = $this -> getDoctrine() -> getRepository("DHBundle:Peliculas");
+        $pelicula = $pelicula -> find($id);
+
+        return $this->render('DHBundle:Default:fullmovie.html.twig', array('pelicula' => $pelicula ));     
+    }
+
+
+    // GALERIA
+    public function galeryAction()
+    {
+        $galeria = $this -> getDoctrine() -> getRepository("DHBundle:Galeria");
+        $galeria = $galeria -> findAll();
+
+        return $this->render('DHBundle:Default:galery.html.twig', array('galeria' => $galeria ));     
+    }
+
+    // GESION DE IDIOIMA
     public function changeLangAction($lang, Request $request)
     {
         $this->get('session')->set('_locale', $lang);

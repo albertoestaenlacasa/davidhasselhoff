@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+
+	<div class="titulo">{% trans from "menu" into _locale %} STR_GALERY {% endtrans %}</div>
+
+		{% for imagen in galeria %}
+			
+			<div class="galeria">
+				<img src="{{ imagen.urlImg }}" width="100%" />
+				<br><br>
+				{{ imagen.titulo }}
+			</div>
+		
+		{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+
+	{% include 'DHBundle:Admin:logout.html.twig' %}
+
+	<div class="titulo">{% trans from "menu" into _locale %} STR_GALERY {% endtrans %}</div>
+
+
+	<form name="frm_new" action="" method="POST">
+
+		<ul type="none">
+			{% for imagen in galeria %}
+				
+				<div class="galeria">
+					<input type="radio" name="galery_id" value="{{ imagen.id }}" />
+					<img src="{{ imagen.urlImg }}" width="100%" />
+					<br><br>
+					{{ imagen.titulo }}
+				</div>
+			
+			{% endfor %}
+		</ul>
+
+		<div class="botones">
+			<input class="boton" type="button" value="{% trans from "content" into _locale %} admin.btn_back {% endtrans %}" onclick="window.location.href='{{ url('dh_admin') }}'">
+			<input class="boton" type="button" value="{% trans from "content" into _locale %} admin.btn_new {% endtrans %}" onclick="window.location.href='{{ url('dh_admin_galery_new') }}'">
+			<input class="boton" type="button" value="{% trans from "content" into _locale %} admin.btn_delete {% endtrans %}" onclick="deleteImage()">
+		</div>
+
+	</form>
+
+{% endblock %}
+
+
+{% block javascript %} 
+
+	<script type="text/javascript">
+
+		function deleteImage(){
+
+			if(document.frm_new.galery_id.value == ''){
+				alert('{% trans from "content" into _locale %} admin.alert_SelectaAnyGalery {% endtrans %}');
+			}else{
+				// delete
+				if(confirm('{% trans from "content" into _locale %} admin.alert_confirmDeleteGalery {% endtrans %}')){						
+					document.frm_new.action ="{{ url('dh_admin_galery_delete') }}";
+					document.frm_new.submit();					
+				}
+			}
+		}
+
+	</script>
+
+{% endblock %}
